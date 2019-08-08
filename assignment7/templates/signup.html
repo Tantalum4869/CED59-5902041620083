@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>59020416200</title>
+    <script language ="JavaScript">
+        function check()
+            {
+                fname = document.frmSignup.txt_fname.value;
+                if(fname.length == "")
+                {
+                    alert("Please enter your firstname.");
+                    return false;
+                }
+                lname = document.frmSignup.txt_lname.value;
+                if(lname.length == "")
+                {
+                    alert("Please enter your lastname.");
+                    return false;
+                }
+                mail = document.frmSignup.txt_mail.value;
+                if(mail.length == "")
+                {
+                    alert("Please enter your E-mail.");
+                    return false;
+                }
+                var userDB = "teddy4869";
+                Username = document.frmSignup.txt_UserName.value;
+                if(Username.length == "")
+                {
+                    alert("Please enter your username.");
+                    return false;
+                }
+                if(Username.length == userDB.length)
+                {
+                    alert("This username already exists in the database.");
+                    return false;
+                }
+                password = document.frmSignup.txt_password.value;
+                if(password.length < 8)
+                {
+                    alert("Please enter at least 8 characters");
+                    return false;
+                }
+            }
+    </script>
+</head>
+<body>
+    <center>
+    <table  border="0" width="400px" >
+        <form name="frmSignup" method="post" action="/" onsubmit="return check()">
+
+                <tr>
+                    <td colspan="2" align="center"><h1>Register</h1></td>
+                </tr>
+
+                <tr>
+                    <td><h4>First Name</h4></td>
+                    <td>: <input type="text" name="txt_fname" size="40" placeholder="Name"></td>
+                </tr>
+
+                <tr>
+                    <td><h4>Last Name</h4></td>
+                    <td>: <input type="text" name="txt_lname" size="40" placeholder="surname"></td>
+                </tr>
+
+                <tr>
+                    <td><h4>E-mail</h4></td>
+                    <td>: <input type="email" name="txt_mail" size="40" placeholder="Email"></td>
+                </tr>
+
+                <tr>
+                    <td><h4>Username</h4></td>
+                    <td>: <input type="text" name="txt_UserName" size="40" placeholder="Username"></td>
+                </tr>
+
+                <tr>
+                    <td><h4>Password</h4></td>
+                    <td>: <input type="password" name="txt_password" size="40" placeholder="Password"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" align="center"> <input type="submit" name="submit" value="Sing Up"></td>
+                </tr>
+
+        </form>
+    </table>
+</center>
+</body>
+</html>
